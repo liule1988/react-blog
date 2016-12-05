@@ -1,50 +1,12 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-    <script src="../build/browser.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>reactdome</title>
 </head>
 <body>
-<div id="example"></div>
-<script type="text/babel">
-    var names = ['Alice', 'Emily', 'Kate'];
-//dasdas
-    ReactDOM.render(
-            <div>
-                {
-                    names.map(function (name) {
-                        return <div>Hello, {name}!</div>
-                    })
-                }
-            </div>,
-            document.getElementById('example')
-    );
-</script>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-    <script src="./build/react.js"></script>
-    <script src="./build/react-dom.js"></script>
-    <script src="./build/browser.min.js"></script>
-</head>
-<body>
-<div id="hh"></div>
-<script type="text/babel">
-    var names = ['Alice', 'Emily', 'Kate'];
-
-    ReactDOM.render(
-            <div>
-                {
-                    names.map(function (name) {
-                        return <div>Hello, {name}!</div>
-                    })
-                }
-            </div>,
-            document.getElementById('hh')
-    );
-</script>
+<div id="content"></div>
+<script src="bundle.js"></script>
 </body>
 </html>
