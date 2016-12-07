@@ -1,0 +1,17 @@
+.li{
+    display:inline-block;
+    padding-left: 20px;
+}
+
+.hh{
+    background: #ddd;
+    display: flex;
+    flex-direction: row;
+}
+.ul{
+
+    text-align: center;
+    display: flex;
+    flex: 80%;
+align-items: center;
+}
