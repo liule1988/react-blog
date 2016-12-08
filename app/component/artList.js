@@ -10,7 +10,7 @@ render(){
     var items = data;
     var renderData = items.map(function (item,index) {
         return(
-            <div key={index}>{item.title}</div>
+            <div key={index}>{item.title}<image resource={require('../images/pic1.png')} style={{width:100,height:100,}}></image></div>
         )
     });
     return(
