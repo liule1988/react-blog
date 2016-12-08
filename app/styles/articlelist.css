@@ -1,0 +1,21 @@
+.listWraper{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #eee;
+    margin-bottom: 20px;
+}
+.art_title{
+    flex: 80%;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+.art_img{
+    display: flex;
+    flex: 20%;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
