@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import data from '../data/text.json'
+import ReactMarkdown from  'react-markdown'
 import imgSrc from '../images/pic1.png'
 import '../styles/articlelist.css'
 export default class ArticleList extends React.Component{

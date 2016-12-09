@@ -1,8 +1,12 @@
 .listWraper{
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
     border-bottom: 1px dashed #eee;
     margin-bottom: 20px;
+    width: 80%;
+    background-color: #ffffff;
+    padding: 10px;
 }
 .art_title{
     flex: 80%;

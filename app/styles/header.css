@@ -1,0 +1,14 @@
+.li{
+    display: inline-block;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.nav{
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: cornflowerblue;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 5px;
+}
