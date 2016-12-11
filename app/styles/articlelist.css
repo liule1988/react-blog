@@ -45,7 +45,6 @@
 .pubulish_time_box{
     flex: 20%;
     font-size: 0.65rem;
-    align-items: baseline;
     padding-left: 24px;
     color: gainsboro;
 }
