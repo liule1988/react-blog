@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/liule1988/blog#readme",
   "dependencies": {
+    "raw-loader": "^0.5.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-markdown": "^2.4.2"
