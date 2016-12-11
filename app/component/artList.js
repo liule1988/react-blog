@@ -28,7 +28,7 @@ constructor(props){
                         <div className="art_title_box">
                             <a href="#" className="art_title"><span className="art_title">{item.title}</span></a>
                         </div>
-                        <div className="pubulish_time_box" style={{flex: 2}}>
+                        <div className="pubulish_time_box" >
                             <span>{item.time}</span>
                         </div>
                     </div>
