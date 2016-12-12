@@ -3,27 +3,56 @@
  */
 import React from 'react';
 import data from '../data/text.json'
+import ReactMarkdown from  'react-markdown'
 import imgSrc from '../images/pic1.png'
 import '../styles/articlelist.css'
-export default class ArticleList extends React.Component{
+import aa from 'raw-loader!../../test.md'
+export default class ArticleList extends React.Component {
+constructor(props){
+    super(props);
+    this.setState({
+        source:''
+    })
+};
 
 
-render(){
-    var items = data;
-    var renderData = items.map(function (item,index) {
-        return(
-            <div key={index} className="listWraper">
-                <div className="art_title">
-                    <a href="#"><h2 className="art_title">{item.title}</h2></a>
+
+    render() {
+        var items = data;
+        console.log(aa);
+        var bb=aa;
+        var renderData = items.map(function (item, index) {
+            return (
+                <div key={index} className="listWraper">
+                    <div className="art_title">
+                        <div className="art_title_box">
+                            <a href="#" className="art_title"><span className="art_title">{item.title}</span></a>
+                        </div>
+                        <div className="pubulish_time_box" >
+                            <span>{item.time}</span>
+                        </div>
+                    </div>
+                    <div className="art_img">
+                        <img src={item.imgUrl} style={{width: 35, height: 35}}/>
+                    </div>
+
+
                 </div>
-                <div className="art_img">
-                    <img src={item.imgUrl} style={{width:50,height:50}}/>
+            )
+        });
+        return (
+                <div className="art_list_box">
+                    <div className="art_nav_tag">
+                        近期文章
+                    </div>
+                    {renderData}
+                    {/*{detail}*/}
                 </div>
-            </div>
+
         )
-    });
-    return(
-        <div>{renderData}</div>
-    )
+    }
 }
+
+const styles={
+
 }

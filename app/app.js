@@ -3,11 +3,17 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ArticleList from './component/artList'
+import Header from './component/header'
+import ArticleList from './component/artList';
+import Banner from './component/banner';
 class HelloWorld extends React.Component {
     render() {
         return (
-            <div><ArticleList/></div>
+            <div>
+                <Header/>
+                <Banner title={"平凡之路"}/>
+                <ArticleList/>
+            </div>
         );
     }
 }
