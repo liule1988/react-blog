@@ -10,20 +10,34 @@ import aa from 'raw-loader!../../test.md'
 export default class ArticleList extends React.Component {
 constructor(props){
     super(props);
+    this.state={
+        source:'',
+        show:true
+    };
+    this.handleClick=this.handleClick.bind(this);
+    this.backList=this.backList.bind(this);
+}
+handleClick(){
+
+
     this.setState({
-        source:''
-    })
-};
-
-
+        source:aa,
+        show:false
+    });
+}
+backList(){
+    this.setState({
+        source:'',
+        show:true
+    });
+}
 
     render() {
         var items = data;
         console.log(aa);
         var bb=aa;
-        var renderData = items.map(function (item, index) {
-            return (
-                <div key={index} className="listWraper">
+        var renderData = items.map((item, index)=>(
+        <div key={index} className="listWraper" onClick={this.handleClick}>
                     <div className="art_title">
                         <div className="art_title_box">
                             <a href="#" className="art_title"><span className="art_title">{item.title}</span></a>
@@ -38,15 +52,16 @@ constructor(props){
 
 
                 </div>
-            )
-        });
+        ))
         return (
-                <div className="art_list_box">
-                    <div className="art_nav_tag">
+                <div className="art_list_box" >
+                    <div className="art_nav_tag" onClick={this.handleClick} >
                         近期文章
                     </div>
-                    {renderData}
-                    {/*{detail}*/}
+                    {this.state.show?renderData:null}
+                    {this.state.show?null:<div onClick={this.backList}>返回</div>}
+                    <ReactMarkdown source={this.state.source}/>
+                    {this.state.show?null:<div onClick={this.backList}>返回</div>}
                 </div>
 
         )

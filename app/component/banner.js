@@ -4,9 +4,9 @@
 import React from 'react';
 import '../styles/banner.css'
 var welcomebg=['app/images/pic1.png', 'app/images/pic2.jpg','app/images/pic3.jpg',
-            'app/images/pic4.jpg','app/images/pic5.jpg', 'app/images/pic6.jpg',
-        'app/images/pic7.png','app/images/pic8.png','app/images/pic9.png',
-    'app/images/pic10.png',];
+            'app/images/pic4.jpg','app/images/pic5.jpg', 'app/images/pic5.jpg',
+        'app/images/pic1.png','app/images/pic4.jpg','app/images/pic2.jpg',
+    'app/images/pic2.jpg',];
 export default class Banner extends React.Component{
         constructor(props){
             super(props);
