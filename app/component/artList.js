@@ -6,7 +6,7 @@ import data from '../data/text.json'
 import ReactMarkdown from  'react-markdown'
 import imgSrc from '../images/pic1.png'
 import '../styles/articlelist.css'
-// import $ from  'jquery'
+import $ from  'jquery'
 import Cell from './article_cell'
 import '../styles/articlelist.css'
 export default class ArticleList extends React.Component {
@@ -21,28 +21,28 @@ constructor(props){
 }
 componentDidMount(){
     var that =this;
-    // $.ajax({
-    //     // url: "https://api.douban.com/v2/movie/in_theaters",
-    //     url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
-    //
-    //     type: 'GET',
-    //     dataType: 'JSON',//here
-    //     success: function (data) {
-    //         console.log(JSON.stringify(data))
-    //     that.setState({
-    //         source:data,
-    //         show:true
-    //     })
-    //     }
-    // });
-    fetch("https://api.github.com/repos/liule1988/liule.github.io/issues").then(function(response) {
-        return response.json();
-    }).then(function(json) {
+    $.ajax({
+        // url: "https://api.douban.com/v2/movie/in_theaters",
+        url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
+
+        type: 'GET',
+        dataType: 'JSON',//here
+        success: function (data) {
+            console.log(JSON.stringify(data))
         that.setState({
-                    source:json,
-                    show:true
-                })
+            source:data,
+            show:true
+        })
+        }
     });
+    // fetch("https://api.github.com/repos/liule1988/liule.github.io/issues").then(function(response) {
+    //     return response.json();
+    // }).then(function(json) {
+    //     that.setState({
+    //                 source:json,
+    //                 show:true
+    //             })
+    // });
     }
 
 
