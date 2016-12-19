@@ -9,6 +9,7 @@ import App from './App';
 import Movie from './Movie';
 import Essay from './Essay';
 import Me from './Me';
+import Article from '../component/article'
 export default class Root extends React.Component {
     render() {
         return (
@@ -23,6 +24,7 @@ const routes = (
         <Route path="movie" component={Movie} />
         <Route path="essay" component={Essay} />
         <Route path="me" component={Me} />
+        <Route path="article/:id" component={Article}/>
 
     </Route>
 );

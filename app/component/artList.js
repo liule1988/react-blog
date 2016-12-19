@@ -23,11 +23,14 @@ componentDidMount(){
     var that =this;
     $.ajax({
         // url: "https://api.douban.com/v2/movie/in_theaters",
+        data:{
+            access_token : '9cdd6b240351fbe4ede'+'244c29492b15c961fd270',
+        },
         url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
         type: 'GET',
         dataType: 'JSON',//here
         success: function (data) {
-            console.log(JSON.stringify(data))
+            // console.log(JSON.stringify(data))
         that.setState({
             source:data,
             show:true
