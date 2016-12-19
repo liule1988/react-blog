@@ -7,8 +7,8 @@ import ReactMarkdown from  'react-markdown'
 import imgSrc from '../images/pic1.png'
 import '../styles/articlelist.css'
 // import $ from  'jquery'
-import aa from 'raw-loader!../../test.md'
 import Cell from './article_cell'
+import '../styles/articlelist.css'
 export default class ArticleList extends React.Component {
 constructor(props){
     super(props);

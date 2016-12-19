@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import ReactMarkdown from  'react-markdown'
+import '../styles/articlelist.css'
 import Article from './article'
 export default class Cell extends React.Component {
     constructor(props){
