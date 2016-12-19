@@ -9,6 +9,7 @@ import '../styles/articlelist.css'
 import $ from  'jquery'
 import Cell from './article_cell'
 import '../styles/articlelist.css'
+import { CONFIG } from '../constant/Config.js';
 export default class ArticleList extends React.Component {
 constructor(props){
     super(props);
@@ -24,7 +25,7 @@ componentDidMount(){
     $.ajax({
         // url: "https://api.douban.com/v2/movie/in_theaters",
         data:{
-            access_token : '9cdd6b240351fbe4ede'+'244c29492b15c961fd270',
+            access_token :CONFIG.access_token,
         },
         url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
         type: 'GET',
