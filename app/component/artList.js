@@ -6,7 +6,7 @@ import data from '../data/text.json'
 import ReactMarkdown from  'react-markdown'
 import imgSrc from '../images/pic1.png'
 import '../styles/articlelist.css'
-import $ from  'jquery'
+// import $ from  'jquery'
 import aa from 'raw-loader!../../test.md'
 import Cell from './article_cell'
 export default class ArticleList extends React.Component {
@@ -20,22 +20,29 @@ constructor(props){
     this.backList=this.backList.bind(this);
 }
 componentDidMount(){
-    var that =this
-    $.ajax({
-        // url: "https://api.douban.com/v2/movie/in_theaters",
-        url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
-
-        type: 'GET',
-        dataType: 'JSON',//here
-        success: function (data) {
-            console.log(JSON.stringify(data))
+    var that =this;
+    // $.ajax({
+    //     // url: "https://api.douban.com/v2/movie/in_theaters",
+    //     url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
+    //
+    //     type: 'GET',
+    //     dataType: 'JSON',//here
+    //     success: function (data) {
+    //         console.log(JSON.stringify(data))
+    //     that.setState({
+    //         source:data,
+    //         show:true
+    //     })
+    //     }
+    // });
+    fetch("https://api.github.com/repos/liule1988/liule.github.io/issues").then(function(response) {
+        return response.json();
+    }).then(function(json) {
         that.setState({
-            source:data,
-            show:true
-        })
-        }
+                    source:json,
+                    show:true
+                })
     });
-
     }
 
 
@@ -81,7 +88,7 @@ backList(){
                     <div className="art_nav_tag" onClick={this.handleClick} >
                         近期文章
                     </div>
-                    {this.state.show?<Cell data={ this.state.source}/>:null}
+                    {this.state.show?<Cell data={ this.state.source} label={this.props.type}/>:null}
                     {/*{this.state.show?renderData:null}*/}
                     {/*{this.state.show?null:<div onClick={this.backList}>返回</div>}*/}
                     {/*/!*<ReactMarkdown source={this.state.source}/>*!/*/}
@@ -94,4 +101,4 @@ backList(){
 
 const styles={
 
-}
+};

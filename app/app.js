@@ -6,16 +6,9 @@ import ReactDOM from 'react-dom';
 import Header from './component/header'
 import ArticleList from './component/artList';
 import Banner from './component/banner';
-class HelloWorld extends React.Component {
-    render() {
-        return (
-            <div>
-                <Header/>
-                <Banner title={"平凡之路"}/>
-                <ArticleList/>
-            </div>
-        );
-    }
-}
+import { Router, Route, hashHistory } from 'react-router';
+import Root from './pages/Root';
 
-ReactDOM.render(<HelloWorld/>, document.getElementById("content"));
+ReactDOM.render((
+    <Root/>
+), document.getElementById("content"));

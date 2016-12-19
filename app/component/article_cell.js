@@ -12,7 +12,7 @@ export default class Cell extends React.Component {
             content:''
         };
         this.handleClick=this.handleClick.bind(this);
-
+        this.spliceJson=this.spliceJson.bind(this);
     }
     handleClick(kk){
         this.setState({
@@ -21,17 +21,30 @@ export default class Cell extends React.Component {
         });
 
     }
+    spliceJson(items,label) {
+        let list = items,
+            articles = [];
 
+        for (let i = 0, listLen = list.length; i < listLen; i++) {
+            let labels = list[i].labels[0].name;
+            console.log(labels);
+            if (labels==label)
+                articles.push(list[i]);
+            }
+
+
+        return articles;
+    }
     render(){
-        console.log(this.props.data);
-        var items=this.props.data;
+        console.log(this.spliceJson(this.props.data));
+        var items=this.spliceJson(this.props.data,this.props.label);
        return(
             <div>
                 {this.state.showArticle?<Article data={this.state.content}/>:items.map((item, index)=>(
                     <div key={index} className="listWraper" onClick={(props)=>this.handleClick(item)}>
 
                             <div className="art_title_box">
-                                <a href="#" className="art_title"><span className="art_title">{item.title}</span></a>
+                                <span className="art_title">{item.title}</span>
                             </div>
 
                         <div className="pubulish_time_box" >

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/header.css'
+import { Link } from 'react-router';
 export  default class Header extends React.Component{
     render(){
         return(
@@ -8,10 +9,10 @@ export  default class Header extends React.Component{
                     <span><a href="#" className="li">Keep Fun</a></span>
                 </div>
                 <nav className="nav">
-                    <a href="/index"><li className="li">首页</li></a>
-                    <a href=""><li className="li">文章</li></a>
-                    <a href=""><li className="li">电影</li></a>
-                    <a href=""><li className="li">我</li></a>
+                    <Link to="tech">技术</Link>
+                    <Link to="movie">电影</Link>
+                    <Link to="essay">随笔</Link>
+                    <Link to="me">我</Link>
                 </nav>
                 <div className="more_icon">三</div>
             </div>

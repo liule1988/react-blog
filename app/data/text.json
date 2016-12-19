@@ -4,7 +4,7 @@
     "content": "原标题：李克强：编制规划一定要契合人民群众普遍呼声",
     "imgUrl": "app/images/pic1.png",
     "time": "2016-12-11",
-    "md":"../../test.md"
+    "md":"raw-loader!../../test.md"
   },
   {
     "title": "这不是个严肃的标题",
