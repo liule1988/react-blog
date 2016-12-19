@@ -25,7 +25,7 @@ componentDidMount(){
     $.ajax({
         // url: "https://api.douban.com/v2/movie/in_theaters",
         data:{
-            access_token :CONFIG.access_token,
+            // access_token :CONFIG.access_token,
         },
         url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
         type: 'GET',
