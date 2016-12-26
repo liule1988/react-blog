@@ -21,23 +21,29 @@ constructor(props){
     this.backList=this.backList.bind(this);
 }
 componentDidMount(){
-    var that =this;
-    $.ajax({
-        // url: "https://api.douban.com/v2/movie/in_theaters",
-        // data:{
-        //     // access_token :CONFIG.access_token,
-        // },
-        url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
-        type: 'GET',
-        dataType: 'JSON',//here
-        success: function (data) {
-            // console.log(JSON.stringify(data))
-        that.setState({
-            source:data,
-            show:true
-        })
-        }
-    });
+    console.log(this.state.source.length);
+    if (this.state.source.length==0) {
+        console.log("我发了请求");
+        var that = this;
+        $.ajax({
+            // url: "https://api.douban.com/v2/movie/in_theaters",
+            // data:{
+            //     // access_token :CONFIG.access_token,
+            // },
+            url: "https://api.github.com/repos/liule1988/liule.github.io/issues",
+            type: 'GET',
+            dataType: 'JSON',//here
+            success: function (data) {
+                // console.log(JSON.stringify(data))
+                that.setState({
+                    source: data,
+                    show: true
+                })
+            }
+        });
+    }else {
+        console.log("不发")
+    }
     // fetch("https://api.github.com/repos/liule1988/liule.github.io/issues").then(function(response) {
     //     return response.json();
     // }).then(function(json) {
@@ -91,7 +97,7 @@ backList(){
                     <div className="art_nav_tag" onClick={this.handleClick} >
                         近期文章
                     </div>
-                    {this.state.show?<Cell data={ this.state.source} label={this.props.type}/>:<div>Loading...</div>}
+                    {this.state.show?<Cell data={ this.state.source} label={this.props.type}/>:<div><img src={require('../images/loading.gif')}/>Loading...</div>}
                     {/*{this.state.show?renderData:null}*/}
                     {/*{this.state.show?null:<div onClick={this.backList}>返回</div>}*/}
                     {/*/!*<ReactMarkdown source={this.state.source}/>*!/*/}

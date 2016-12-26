@@ -46,8 +46,9 @@ export default class Cell extends React.Component {
         var items = this.spliceJson(this.props.data, this.props.label);
         return (
             <div>
-                { this.state.showArticle?<Article data={this.state.content} />:items.map((item, index)=>(
-                        <div className="listWraper"  key={index} onClick={(prams)=>this.handleClick(item)}>
+                { this.state.showArticle?<Article data={this.state.content} />:
+                    items.map((item, index)=>(
+                        <div className="listWraper" key={index} onClick={(prams)=>this.handleClick(item)}>
 
                             <div className="art_title_box">
                                 <span className="art_title">{item.title}</span>
@@ -57,8 +58,9 @@ export default class Cell extends React.Component {
                                 <span>{item.created_at.substr(0, 10)}</span>
                             </div>
                         </div>
+                    ))
 
-                ))
+
                 }
             </div>
 
