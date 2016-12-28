@@ -30,6 +30,8 @@ export default class MovieList extends React.Component {
             var that = this;
             $.ajax({
                 url: "https://api.douban.com/v2/movie/in_theaters",
+                // url: "https://api.douban.com/v2/movie/search?q=长城",
+
                 // data:{
                 //     // access_token :CONFIG.access_token,
                 // },
@@ -37,7 +39,7 @@ export default class MovieList extends React.Component {
                 type: 'GET',
                 dataType: 'JSONP',//here
                 success: function (data) {
-                    // console.log(JSON.stringify(data))
+                    console.log(JSON.stringify(data))
                     that.setState({
                         movie: data.subjects,
                         show: true
