@@ -6,7 +6,7 @@
     /*margin-bottom: 20px;*/
 }
 
-.container{
+.banner_container{
     display: flex;
     margin: auto;
     padding-left: 15px;
@@ -35,7 +35,7 @@
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-    .container{
+    .banner_container{
         display: flex;
         margin: auto;
         padding-left: 15px;

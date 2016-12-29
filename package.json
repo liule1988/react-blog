@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/liule1988/blog#readme",
   "dependencies": {
+    "highlight.js": "^9.9.0",
     "jquery": "^3.1.1",
+    "marked": "^0.3.6",
     "raw-loader": "^0.5.1",
     "react": "^15.4.1",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "react-markdown": "^2.4.2",
     "react-router": "^3.0.0",
