@@ -22,7 +22,7 @@ export default class Banner extends React.Component{
             return(
                 <div>
                     <div style={{backgroundImage:'url('+bgUrl+')'}} className="welcome">
-                        <div className="container">
+                        <div className="banner_container">
                             <div className="wel_title"><span>{this.props.title}</span></div>
                             <div className="wel_contact">
                                 <a><span>QQ</span></a>

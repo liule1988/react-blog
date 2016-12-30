@@ -72,7 +72,7 @@ export default class MovieList extends React.Component {
                 <div className="art_nav_tag" onClick={this.handleClick} >
                     正在热映
                 </div>
-                {this.state.show?<MovieCell data={ this.state.movie}/>:<div><img src={require('../images/loading.gif')}/>Loading...</div>}
+                {this.state.show?<MovieCell data={ this.state.movie}/>:<div className="loader loader-default is-active"></div>}
             </div>
 
         )
