@@ -1,14 +1,6 @@
 <scheme name="Monokai copy" version="142" parent_scheme="Default">
-  <metaInfo>
-    <property name="created">2017-02-16T14:56:03</property>
-    <property name="ide">WebStorm</property>
-    <property name="ideVersion">2016.2.3.0.0</property>
-    <property name="modified">2017-02-16T14:56:54</property>
-    <property name="originalScheme">Monokai</property>
-  </metaInfo>
   <option name="LINE_SPACING" value="1.0" />
   <option name="EDITOR_FONT_SIZE" value="16" />
-  <option name="CONSOLE_FONT_NAME" value="Monospaced" />
   <option name="EDITOR_FONT_NAME" value="Monospaced" />
   <colors>
     <option name="CARET_COLOR" value="f8f8f0" />
