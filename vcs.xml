@@ -10,8 +10,12 @@
           <option name="url" value="https://github.com/liule1988/react-todolist.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/liule1988/vue-blog.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="E:\" />
+    <option name="cloneParentDir" value="D:\vue-blog" />
   </component>
 </application>
