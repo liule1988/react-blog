@@ -1,3 +1,16 @@
+
+body{
+  font-family: -apple-system,Pingfang SC,Microsoft YaHei,Helvetica Neue,Helvetica,Hiragino Sans GB,Hiragino Sans GB W3,Microsoft YaHei UI,WenQuanYi Micro Hei,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+  color: #525251;
+  background-color: #efefee;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
 .app{
   position: relative;
   min-height: calc(100vh - 10rem);
