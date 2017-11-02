@@ -1,0 +1,37 @@
+.app{
+  position: relative;
+  min-height: calc(100vh - 10rem);
+}
+.container{
+  position: relative;
+  min-height: calc(100vh - 10rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  min-width: 20rem;
+  max-width: 80rem;
+}
+.page{
+  padding-top: 3.75rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.slide-right-leave.slide-right-leave-active {
+  opacity: 1;
+  transition: all 0.25s linear;
+  transform: translate3d(100%, 0, 0)
+}
+
+.slide-right-enter.slide-right-enter-active {
+  opacity: 1;
+  transition: all 0.25s linear;
+  transform: translate3d(0%, 0, 0)
+}
+

@@ -1,0 +1,96 @@
+.app-header {
+  position: fixed;
+  width: 100%;
+  min-height: 3.75rem;
+  background-color: hsla(0, 0%, 100%, .9);
+  box-shadow: 0 0.0625rem 0.3125rem rgba(0, 0, 0, .09);
+  z-index: 1000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 0;
+  left: 0;
+  .app-header-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 20rem;
+    max-width: 80rem;
+  }
+
+  .app-logo{
+    display: block;
+    width: 10.125rem;
+    height: 2.5rem;
+    //background: url(/static/img/logo-black.svg) no-repeat;
+    //background-size: cover;
+    //text-indent: -9999rem;
+    margin: .625rem 0;
+    text-decoration: none;
+    line-height: 2.5rem;
+  }
+
+  .app-nav{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    a{
+      display: block;
+      text-decoration: none;
+      color: #525251;
+    }
+    >ul{
+      margin: 0;
+      padding: 0;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      list-style: none;
+      position: relative;
+      >li{
+        margin: 0 .3125rem;
+        position: relative;
+        >a{
+          font-size: .9375rem;
+          line-height: 1.875rem;
+          padding: .9375rem 1.25rem;
+          transition: color .2s;
+          &:after{
+            width: 0;
+            height: .125rem;
+            position: absolute;
+            bottom: -.0625rem;
+            background-color: #6bc30d;
+            left: 50%;
+            content: "";
+            transition: all .6s;
+            z-index: -1;
+          }
+          &.active:after{
+            width: 100%;
+            left: 0;
+          }
+        }
+
+
+      }
+    }
+  }
+}
