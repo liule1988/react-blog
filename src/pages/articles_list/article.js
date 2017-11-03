@@ -5,6 +5,9 @@ import {
 import './article.scss'
 import axios from 'axios'
 import A_ListItem from '../../components/Articles/List/listItem'
+import {action_articles_data} from '../../redux/action/article'
+import { connect } from 'react-redux'
+
 class Articles extends Component {
     constructor() {
         super();
@@ -23,7 +26,8 @@ class Articles extends Component {
             ,).then(res => {
             this.setState({
                 articles_data: res.data
-            })
+            });
+            this.props.onChangeArticles(res.data)
         })
     }
 
@@ -35,6 +39,11 @@ class Articles extends Component {
                         <div className="article-items">
                             {this.state.articles_data.length > 0 ?
                                 this.state.articles_data.map(item => (
+                                    <A_ListItem data={item} key={item.id}/>
+                                )) : '' }
+
+                            {this.props.articles.length > 0 ?
+                                this.props.articles.map(item => (
                                     <A_ListItem data={item} key={item.id}/>
                                 )) : '' }
                         </div>
@@ -49,4 +58,22 @@ class Articles extends Component {
     }
 }
 
-export default Articles
+const mapStateToProps=(state)=>{
+    return{
+        articles:state.articles
+    }
+}
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        onChangeArticles:(data)=>{
+            dispatch(action_articles_data(data))
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Articles);
+
+
