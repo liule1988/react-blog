@@ -48,3 +48,18 @@ body{
   transform: translate3d(0%, 0, 0)
 }
 
+.le-clearfix:after{
+  clear: both;
+}
+.le-clearfix:after, .le-clearfix:before {
+  display: table;
+  content: " ";
+}
+
+.le-fl{
+  float: left;
+}
+
+.le-fr{
+  float: right;
+}

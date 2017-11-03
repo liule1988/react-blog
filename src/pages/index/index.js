@@ -13,10 +13,10 @@ class IndexPage extends Component{
                 <div className="page page-index">
                     <div className="index-banner background-fixed">
                         <div className="le-container">
-                            <h1 className="app-name">KeepFun</h1>
-                            <p className="app-slogan">有些故事还没讲完，那就算了吧</p>
+                            <h1 className="app-name">Blog</h1>
+                            <p className="app-slogan">learn once，write everywhere</p>
                             <div className="index-btns">
-                                <Link to="http://www.baidu.com" target="_blank">GitHub</Link>
+                                <a href="http://www.baidu.com" target="_blank">GitHub</a>
                                 <Link to="/articles">进入博客</Link>
                             </div>
                         </div>

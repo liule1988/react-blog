@@ -453,3 +453,10 @@ a {
     cursor: pointer;
     color: #0366d6;
 }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+    color: #181817;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: .5rem;
+}

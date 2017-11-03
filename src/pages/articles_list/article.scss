@@ -1,0 +1,23 @@
+.page-article {
+  .article-list {
+    width: 1%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    min-width: 20rem;
+  }
+  .article-aside{
+    width: 18.75rem;
+    min-width: 15rem;
+    margin-left: 1.25rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .article-items{
+    margin-top: 1.25rem;
+    min-height: 2rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  }
+}
+
+

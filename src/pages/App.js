@@ -10,7 +10,7 @@ import './normalize.css';
 import './app.scss'
 import Header from '../components/Header/header'
 import IndexPage from './index/index'
-import Article from './articles/article'
+import Article from './articles_list/article'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 

@@ -1,0 +1,126 @@
+
+h3{
+  font-size: 1.25rem;
+}
+.item{
+  background-color: #fff;
+  padding: 1.25rem;
+  position: relative;
+  transition: background-color .5s ease;
+  border-bottom: 1px solid #dededd;
+  margin-bottom: 1rem;
+  &:hover .item-head:after{
+    width: 100%;
+  }
+  .item-head{
+    padding-bottom: .5rem;
+    border-bottom: .0625rem solid #f2f2f1;
+    padding-right: 6.25rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 2px;
+      bottom: -1px;
+      position: absolute;
+      left: 0;
+      width: 0;
+      background-color: #6bc30d;
+      transition: width .2s;}
+     &:hover{
+      cursor: pointer;;
+    }
+    .item-title{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-transform: uppercase
+    }
+    .item-info{
+      margin: 0;
+      color: #9c9d9b;
+      font-size: .8125rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      span{
+        margin-right: 1rem;
+      }
+      a{
+        margin-right: 0.5rem;
+
+      }
+    }
+
+    .item-time{
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #b6b6b5;
+      font-size: .8125rem;
+    }
+
+
+  }
+
+  .item-body{
+    overflow: hidden;
+    margin: 1.25rem 0;
+    position: relative;
+
+    .item-body-thumb{
+      margin: 0 0 1rem;
+      width: 18.75rem;
+      height: 11.25rem;
+      float: left;
+      margin-right: .625rem;
+      overflow: hidden;
+      background-color: #f2f2f1;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .img-flicker{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-content{
+      font-size: .9375rem;
+      line-height: 1.625rem;
+    }
+  }
+
+  .item-footer{
+    font-size: .8125rem;
+    color: #9c9d9b;
+    white-space: nowrap;
+    .item-tags{
+      max-width: 65%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .item-tag{
+      margin-right: .5rem;
+      color: #9c9d9b;
+      text-transform: capitalize;
+    }
+    .item-comment{
+      max-width: 35%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+}
+
+
