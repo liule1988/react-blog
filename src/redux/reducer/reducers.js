@@ -7,7 +7,7 @@ export default function (state = initState, action)  {
         case "ARTICLE_DATA":
             return {
                 ...state,
-                animateCls: action.articles
+                articles: action.articles
             }
         default:
             return state

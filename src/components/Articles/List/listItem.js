@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 import './listItem.scss'
 import ReactMarkdown from 'react-markdown'
 import TimeBox from '../Calendar/calendar'
 class A_ListItem extends Component {
     constructor() {
         super();
+        console.log(this.props)
     }
 
     getImgInMd = (md) => {
@@ -28,9 +30,12 @@ class A_ListItem extends Component {
         return (
 
             <div className="item">
+
                 <div className="item-head">
                     <h3 className="item-title">
-                        {this.props.data.title}
+                        <Link to={'/articles/detail/'+this.props.data.number}>
+                            {this.props.data.title}
+                        </Link>
                     </h3>
                     <p className="item-info">
                         <span>作者：封寒旭</span>
