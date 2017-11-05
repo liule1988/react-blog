@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 import {action_articles_data} from '../../redux/action/article'
 import {connect} from 'react-redux'
 import axios from 'axios'
+import './articles_detail.scss'
+import ReactMarkdown from 'react-markdown'
 class A_Detail extends Component {
     constructor(props) {
         super(props)
@@ -16,7 +18,7 @@ class A_Detail extends Component {
     componentDidMount() {
         console.log(this.props.match.params.id)
         let article_id = this.props.match.params.id;
-        let url = "https://api.github.com/repositories/69333276/issues/"+article_id
+        let url = "https://api.github.com/repositories/69333276/issues/" + article_id
         axios.get(url,
             {
                 headers: {
@@ -35,7 +37,17 @@ class A_Detail extends Component {
     render() {
         return (
             <div className="article-detail">
-                <div className="detail-banner"></div>
+                <div className="detail-banner" style={{backgroundImage: 'url(http://www.ss.xx.jpg)'}}>
+                    <div className="detail-banner-container">
+                        <h1>{this.state.content.title}</h1>
+                    </div>
+                </div>
+
+                <div className="le-container">
+                    <div className="detail-body">
+                        <ReactMarkdown source={this.state.content.body_html}/>
+                    </div>
+                </div>
             </div>
         )
     }

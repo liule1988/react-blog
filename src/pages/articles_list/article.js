@@ -13,13 +13,15 @@ class Articles extends Component {
     constructor() {
         super();
         this.state = {
-            articles_data: []
+            articles_data: [],
+            cato_slider_H:0
         }
 
     }
 
     componentDidMount() {
         axios.get("https://api.github.com/repositories/69333276/issues", {
+                params: {},
                 headers: {
                     'Accept': 'application/vnd.github.v3.html',
                 }
@@ -34,26 +36,64 @@ class Articles extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <Route exact path="/articles" render={
-                    (props) => (<div className="page page-article">
-                        <div className="article-list">
-                            <div className="article-items">
-                                {this.state.articles_data.length > 0 &&
-                                this.state.articles_data.map(item => (
-                                    <A_ListItem data={item} key={item.id}/>
-                                ))  }
+                    (props) => (
+                        <div className="container">
+
+                            <div className="page page-article">
+                                <div className="article-list">
+                                    <div className="article-items">
+                                        {this.state.articles_data.length > 0 &&
+                                        this.state.articles_data.map(item => (
+                                            <A_ListItem data={item} key={item.id}/>
+                                        ))  }
+
+                                    </div>
+
+                                </div>
+                                <div className="article-aside le-clearfix">
+                                    <div className="article-list-aside-item">
+                                        <div className="blog-search">
+                                            <form className="blog-search-form">
+
+                                                <label className="form-body">
+                                                    <input placeholder="搜索一下"/>
+                                                </label>
+                                            </form>
+                                        </div>
+                                        <div className="blog-category">
+                                            <ul>
+                                                <li className="blog-category-item">
+                                                    <a href="#">全部博文</a>
+                                                </li>
+                                                <li className="blog-category-item">
+                                                    <a href="#">技术博客</a>
+                                                </li>
+                                                <li className="blog-category-item">
+                                                    <a href="#">随笔</a>
+                                                </li>
+                                                <li className="blog-category-item">
+                                                    <a href="#">影视漫谈</a>
+                                                </li>
+                                                <li>
+                                                    <li className="category-slider" style={{top:this.state.cato_slider_H+'px'}}>
+
+                                                    </li>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
-
                         </div>
-                        <div className="article-aside">
-                        </div>
-
-                    </div>)
+                    )
                 }/>
 
-                <Route path="/articles/detail/:id" component={A_Detail}/>
+                < Route
+                    path="/articles/detail/:id"
+                    component={A_Detail}/>
             </div>
         )
     }
