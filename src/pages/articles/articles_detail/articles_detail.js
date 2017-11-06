@@ -2,7 +2,7 @@
  * Created by Administrator on 2017/11/3.
  */
 import React, {Component} from 'react';
-import {action_articles_data} from '../../redux/action/article'
+import {action_articles_data} from '../../../redux/action/article'
 import {connect} from 'react-redux'
 import axios from 'axios'
 import './articles_detail.scss'
@@ -45,7 +45,7 @@ class A_Detail extends Component {
 
                 <div className="le-container">
                     <div className="detail-body">
-                        <ReactMarkdown source={this.state.content.body_html}/>
+                        {this.state.content.body_html && <ReactMarkdown source={this.state.content.body_html}/>}
                     </div>
                 </div>
             </div>
