@@ -26,10 +26,10 @@ h3{
       left: 0;
       width: 0;
       background-color: #6bc30d;
-      transition: width .2s;}
-     &:hover{
-      cursor: pointer;;
+      transition: width .2s;
     }
+    &:hover{
+      cursor: pointer;}
     .item-title{
       overflow: hidden;
       white-space: nowrap;
