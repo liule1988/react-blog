@@ -54,15 +54,19 @@ class ArticlesList extends Component {
                 }
             }
             ,).then(res => {
-            this.setState({
-                articles_data: res.data
-            });
+
+            let hot = JSON.parse(JSON.stringify(res.data));
             if (key == 'all') {
-                let hot_sort_articles = res.data.sort((x, y) => {
+                let hot_sort_articles = hot.sort((x, y) => {
                     return y.comments - x.comments
                 })
                 this.setState({
-                    hot_articles: hot_sort_articles
+                    hot_articles: hot_sort_articles,
+                    articles_data:JSON.parse(JSON.stringify(res.data))
+                });
+            } else {
+                this.setState({
+                    articles_data: JSON.parse(JSON.stringify(res.data))
                 });
             }
         })

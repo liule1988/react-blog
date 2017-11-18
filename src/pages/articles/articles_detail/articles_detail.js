@@ -6,6 +6,7 @@ import {action_articles_data} from '../../../redux/action/article'
 import {connect} from 'react-redux'
 import axios from 'axios'
 import './articles_detail.scss'
+import '../markdown.scss'
 import ReactMarkdown from 'react-markdown'
 class A_Detail extends Component {
     constructor(props) {
@@ -45,7 +46,7 @@ class A_Detail extends Component {
 
                 <div className="le-container">
                     <div className="detail-body">
-                        {this.state.content.body_html && <ReactMarkdown source={this.state.content.body_html}/>}
+                        {this.state.content.body_html && <ReactMarkdown className="markdown-body" source={this.state.content.body_html}/>}
                     </div>
                 </div>
             </div>
