@@ -10,7 +10,7 @@ h3{
   border-bottom: 1px solid #dededd;
   margin-bottom: 1rem;
   &:hover .item-head:after{
-    width: 100%;
+  width: 100%;
   }
   .item-head{
     padding-bottom: .5rem;
@@ -28,13 +28,15 @@ h3{
       background-color: #6bc30d;
       transition: width .2s;
     }
-    &:hover{
-      cursor: pointer;}
     .item-title{
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
-      text-transform: uppercase
+      text-transform: uppercase;
+      &:hover{
+        cursor: pointer
+
+    }
     }
     .item-info{
       margin: 0;
@@ -122,5 +124,3 @@ h3{
   }
 
 }
-
-

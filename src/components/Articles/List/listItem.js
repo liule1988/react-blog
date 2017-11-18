@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import './listItem.scss'
 import ReactMarkdown from 'react-markdown'
 import TimeBox from '../Calendar/calendar'
 class A_ListItem extends Component {
     constructor() {
         super();
+        document.body.addEventListener('touchstart', function(){ });
         console.log(this.props)
     }
 
@@ -32,7 +33,7 @@ class A_ListItem extends Component {
             <div className="item">
 
                 <div className="item-head">
-                    <h3 className="item-title">
+                    <h3 className="item-title" >
                         <Link to={'/articles/detail/'+this.props.data.number}>
                             {this.props.data.title}
                         </Link>
