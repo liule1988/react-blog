@@ -11,6 +11,7 @@ import './app.scss'
 import Header from '../components/Header/header'
 import IndexPage from './index/index'
 import Article from './articles/article'
+import About from './about/about'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
@@ -22,15 +23,15 @@ class App extends Component {
     render() {
         return (
 
-                <Router>
-                    <div className="app">
-                        <Header/>
+            <Router>
+                <div className="app">
+                    <Header/>
 
-                        <Route exact path="/" component={IndexPage}/>
-                        <Route path="/articles" component={Article}/>
-
-                    </div>
-                </Router>
+                    <Route exact path="/" component={IndexPage}/>
+                    <Route path="/articles" component={Article}/>
+                    <Route path="/me" component={About}/>
+                </div>
+            </Router>
         )
     }
 
