@@ -13,7 +13,7 @@ class About extends Component {
     render() {
         return (<div className="about-page">
             <div className="page-phone">
-                <iframe src="http://me18.cn/react-blog"></iframe>
+                <iframe src="http://elemefe.github.io/mint-ui/#/"></iframe>
             </div>
             <div className="page-mine">
                 <div className="page-mine-item">
