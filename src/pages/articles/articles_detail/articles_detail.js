@@ -38,7 +38,7 @@ class A_Detail extends Component {
     render() {
         return (
             <div className="article-detail">
-                <div className="detail-banner" style={{backgroundImage: 'url(http://www.ss.xx.jpg)'}}>
+                <div className="detail-banner">
                     <div className="detail-banner-container">
                         <h1>{this.state.content.title}</h1>
                     </div>
