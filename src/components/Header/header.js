@@ -37,7 +37,7 @@ class LeHeader extends Component {
         return (
             <header className={this.state.styles.className}>
                 <div className="app-header-body">
-                    <a className="app-logo">
+                    <a href="/" className="app-logo">
                         My blog
                     </a>
                     <nav className="app-nav">
@@ -49,7 +49,7 @@ class LeHeader extends Component {
                                 <NavLink to="/articles" onClick={this.closeNav}>文章</NavLink>
                             </li>
                             <li>
-                                <NavLink to="/me" onClick={this.closeNav}>关于</NavLink>
+                                <a href="http://liule.top/me" >关于</a>
                             </li>
                         </ul>
                     </nav>
