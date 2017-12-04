@@ -42,7 +42,7 @@ class A_ListItem extends Component {
                         <span>作者：封寒旭</span>
                         <span>
                             栏目：
-                            <a href="#" >{this.props.data.labels[0].name}</a>
+                            <a href="#" >{this.props.data.labels[0]?this.props.data.labels[0].name:''}</a>
                         </span>
                     </p>
                     <div className="item-time">
